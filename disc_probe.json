@@ -1,0 +1,30 @@
+{
+  "cue_name": "Jackie Chan Stuntmaster (USA).cue",
+  "bin_name": "Jackie Chan Stuntmaster (USA).bin",
+  "track_count": 1,
+  "data_track_size": 627972240,
+  "data_track_md5": "d4c9bdde0e8741972d7b262b8ffd3093",
+  "data_track_sha1": "afa11e3b087bca1c7e64fdc49c9c4af05c136e39",
+  "data_track_sha256": "0dfc8fcb055e2ebf22380f5ff7568706376588fdcf8c4086dcfca67dc8295e14",
+  "data_track_crc32": "b68270eb",
+  "boot_exe": "SLUS_006.84",
+  "serial": "SLUS-00684",
+  "serial_exe": "SLUS_006.84",
+  "volume_id": "SLUS-00684",
+  "display_name": "Jackie Chan Stuntmaster",
+  "load_address": "0x8002601C",
+  "entry_pc": "0x8002601C",
+  "text_size": "0x000B7800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "eef6e1285a71c59f61ecc7d164e6bb923413ea4b243cce5af6db302d03153a47",
+  "boot_exe_sha256": "5aae79f0d603bf95bdcf9a2c278d1891dcbd9e835a59d4673d6e6dbd82665c64",
+  "seed_count": 2411,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity).",
+    "This verified Redump release is a complete one-track disc."
+  ]
+}

@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Jackie Chan Stuntmaster"
+id = "SLUS-00684"
+players = 1
+exe = "disc/SLUS_006.84"
+disc = "disc/Jackie Chan Stuntmaster (USA).cue"
+load_address = "0x8002601C"
+entry_pc = "0x8002601C"
+text_size = "0x000B7800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Jackie Chan Stuntmaster (USA).bin"
+cue_name = "Jackie Chan Stuntmaster (USA).cue"
+boot_exe = "SLUS_006.84"
+known_sizes = [627972240]
+known_md5 = [
+  "d4c9bdde0e8741972d7b262b8ffd3093",
+]
+known_sha1 = [
+  "afa11e3b087bca1c7e64fdc49c9c4af05c136e39",
+]
+known_crc32 = [
+  "b68270eb",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+strict = true
+
+[runtime]
+window_title = "Jackie Chan Stuntmaster Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "eef6e1285a71c59f61ecc7d164e6bb923413ea4b243cce5af6db302d03153a47"
